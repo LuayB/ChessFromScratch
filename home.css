@@ -3,8 +3,12 @@ table {
 }
 
 td, th {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
+}
+
+td {
+    text-align: center;
 }
 
 #dark-square {
@@ -13,4 +17,9 @@ td, th {
 
 #light-square {
     background-color: #E8ECCC;
+}
+
+img {
+    width: 60px;
+    height: 60px;
 }
