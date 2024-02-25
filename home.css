@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    width: 60px;
+    height: 60px;
+}
+
+#dark-square {
+    background-color: #769955;
+}
+
+#light-square {
+    background-color: #E8ECCC;
+}
