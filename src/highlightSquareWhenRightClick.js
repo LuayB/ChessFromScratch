@@ -10,7 +10,7 @@ for (var i = 0; i < positions.length; i++) {
 
 //highlights light and dark squares with different shades of red
 function highlightSquareWithRed(square) {
-    if(square.id == 'light-square') {
+    if(square.classList.contains('light-square')) {
         square.classList.toggle('highlightLightSquareWithRed');
     } else {
         square.classList.toggle('highlightDarkSquareWithRed');

@@ -30,7 +30,7 @@ function highlightPiece(piece) {
 
     //highlights the new selected position
     if(isPiece(piece)) {
-        if(piece.id == 'light-square') {
+        if(piece.classList.contains('light-square')) {
             piece.classList.toggle('highlightLightPieceWhenLeftClick');
             removeAllRedHighlighting();
         } else {

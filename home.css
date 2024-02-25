@@ -1,3 +1,13 @@
+/* Generic */
+
+body {
+    background-color: #312E2A;
+}
+
+h1 {
+    color: white;
+}
+
 /* The default board */
 
 table {
@@ -13,12 +23,12 @@ td {
     text-align: center;
 }
 
-#dark-square {
+.dark-square {
     background-color: #769955;
     color: #E8ECCC;
 }
 
-#light-square {
+.light-square {
     background-color: #E8ECCC;
     color: #769955;
 }
