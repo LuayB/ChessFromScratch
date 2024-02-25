@@ -13,14 +13,20 @@ td {
 
 #dark-square {
     background-color: #769955;
+    color: #E8ECCC;
 }
 
 #light-square {
     background-color: #E8ECCC;
+    color: #769955;
 }
 
 img {
     width: 60px;
     height: 60px;
     -webkit-user-drag: none;
+}
+
+.highlight {
+    background-color: #BACC45 !important;
 }
