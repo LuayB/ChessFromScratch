@@ -21,15 +21,24 @@ function highlightPiece(piece) {
 
     //unhighlights the previous highlighted position
     for(var i = 0; i < positions.length; i++) {
-        if(positions[i] != piece && positions[i].classList.contains('highlightPieceWhenLeftClick')) {
-            positions[i].classList.remove('highlightPieceWhenLeftClick');
+        if(positions[i] != piece) {
+            if(positions[i].classList.contains('highlightLightPieceWhenLeftClick')) {
+                positions[i].classList.remove('highlightLightPieceWhenLeftClick');
+            } else {
+                positions[i].classList.remove('highlightDarkPieceWhenLeftClick');
+            }
         }
     }
 
     //highlights the new selected position
     for(var i = 0; i < children.length; i++) {
         if(children[i].tagName == 'IMG') {
-            piece.classList.toggle('highlightPieceWhenLeftClick');
+            if(piece.id == 'light-square') {
+                piece.classList.toggle('highlightLightPieceWhenLeftClick');
+            } else {
+                piece.classList.toggle('highlightDarkPieceWhenLeftClick');
+            }
+            
             break;
         }
     }

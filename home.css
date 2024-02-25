@@ -31,7 +31,11 @@ img {
 
 /* Highlighting pieces/squares */
 
-.highlightPieceWhenLeftClick {
+.highlightLightPieceWhenLeftClick {
+    background-color: #F5F681 !important;
+}
+
+.highlightDarkPieceWhenLeftClick {
     background-color: #BACC45 !important;
 }
 

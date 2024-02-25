@@ -11,8 +11,12 @@ for (var i = 0; i < positions.length; i++) {
 //highlights light and dark squares with different shades of red
 function highlightSquareWithRed(square) {
     //removes piece highlighting to replace with red highlighting
-    if(square.classList.contains('highlightPieceWhenLeftClick')) {
-        square.classList.remove('highlightPieceWhenLeftClick');
+    if(square.classList.contains('highlightLightPieceWhenLeftClick')) {
+        square.classList.remove('highlightLightPieceWhenLeftClick');
+    }
+
+    if(square.classList.contains('highlightDarkPieceWhenLeftClick')) {
+        square.classList.remove('highlightDarkPieceWhenLeftClick');
     }
 
     if(square.id == 'light-square') {
