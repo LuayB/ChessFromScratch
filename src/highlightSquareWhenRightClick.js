@@ -10,18 +10,20 @@ for (var i = 0; i < positions.length; i++) {
 
 //highlights light and dark squares with different shades of red
 function highlightSquareWithRed(square) {
-    //removes piece highlighting to replace with red highlighting
-    if(square.classList.contains('highlightLightPieceWhenLeftClick')) {
-        square.classList.remove('highlightLightPieceWhenLeftClick');
-    }
-
-    if(square.classList.contains('highlightDarkPieceWhenLeftClick')) {
-        square.classList.remove('highlightDarkPieceWhenLeftClick');
-    }
-
     if(square.id == 'light-square') {
         square.classList.toggle('highlightLightSquareWithRed');
     } else {
         square.classList.toggle('highlightDarkSquareWithRed');
+    }
+
+    //removes all piece highlighting to replace with red highlighting
+    for (var i = 0; i < positions.length; i++) {
+        if(positions[i].classList.contains('highlightLightPieceWhenLeftClick')) {
+            positions[i].classList.remove('highlightLightPieceWhenLeftClick');
+        }
+
+        if(positions[i].classList.contains('highlightDarkPieceWhenLeftClick')) {
+            positions[i].classList.remove('highlightDarkPieceWhenLeftClick');
+        }
     }
 }
