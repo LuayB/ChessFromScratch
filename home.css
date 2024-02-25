@@ -1,3 +1,5 @@
+/* The default board */
+
 table {
     border-collapse: collapse;
 }
@@ -27,6 +29,16 @@ img {
     -webkit-user-drag: none;
 }
 
-.highlight {
+/* Highlighting pieces/squares */
+
+.highlightPieceWhenLeftClick {
     background-color: #BACC45 !important;
+}
+
+.highlightLightSquareWithRed {
+    background-color: #EA7C69 !important;
+}
+
+.highlightDarkSquareWithRed {
+    background-color: #D46C50 !important;
 }
