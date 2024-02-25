@@ -8,8 +8,6 @@ for (var i = 0; i < positions.length; i++) {
 }
 
 function highlightPiece(piece) {
-    var children = piece.childNodes;
-
     //removes red highlighting to replace with piece highlighting
     if(piece.classList.contains('highlightLightSquareWithRed')) {
         piece.classList.remove('highlightLightSquareWithRed');
@@ -31,15 +29,27 @@ function highlightPiece(piece) {
     }
 
     //highlights the new selected position
-    for(var i = 0; i < children.length; i++) {
-        if(children[i].tagName == 'IMG') {
-            if(piece.id == 'light-square') {
-                piece.classList.toggle('highlightLightPieceWhenLeftClick');
-            } else {
-                piece.classList.toggle('highlightDarkPieceWhenLeftClick');
-            }
-            
-            break;
+    if(isPiece(piece)) {
+        if(piece.id == 'light-square') {
+            piece.classList.toggle('highlightLightPieceWhenLeftClick');
+            removeAllRedHighlighting();
+        } else {
+            piece.classList.toggle('highlightDarkPieceWhenLeftClick');
+            removeAllRedHighlighting();
+        }
+    } else {
+        removeAllRedHighlighting();
+    }
+}
+
+function removeAllRedHighlighting() {
+    for (var i = 0; i < positions.length; i++) {
+        if(positions[i].classList.contains('highlightLightSquareWithRed')) {
+            positions[i].classList.remove('highlightLightSquareWithRed')
+        }
+
+        if(positions[i].classList.contains('highlightDarkSquareWithRed')) {
+            positions[i].classList.remove('highlightDarkSquareWithRed')
         }
     }
 }
