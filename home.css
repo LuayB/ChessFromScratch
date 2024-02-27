@@ -2,6 +2,7 @@
 
 body {
     background-color: #312E2A;
+    font-family: sans-serif;
 }
 
 h1 {
@@ -21,6 +22,7 @@ td, th {
 
 td {
     text-align: center;
+    position: relative;
 }
 
 .dark-square {
@@ -37,6 +39,22 @@ img {
     width: 60px;
     height: 60px;
     -webkit-user-drag: none;
+}
+
+/* Square labelling for the first column and last row */
+
+#number-label {
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    user-select: none;
+}
+
+#letter-label {
+    position: absolute;
+    bottom: 2.5px;
+    right: 2.5px;
+    user-select: none;
 }
 
 /* Highlighting pieces/squares */
